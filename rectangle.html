@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rectangle Calculator</title>
+        
+    </head>
+    <body style="background-color: aquamarine;font-style: initial;font-size: large;">
+        <h2><u>Rectangle Perimeter Calculator</u></h2>
+
+        <br>
+
+        <b>Enter length :</b>
+        <input type="text" id="length"> cm<br><br>
+        <b>Enter width  :</b>
+        <input type="text" id="width"> cm<br><br>
+        <input type="button" value="Result" onclick="perimeter()" style="background-color: blueviolet;color: azure;"><br><br>
+
+        <b>Result:</b>
+        <input type="text" id="result"> cm
+
+        <script>
+            function perimeter(){
+                var length = parseFloat(document.getElementById("length").value);
+                var width = parseFloat(document.getElementById("width").value);
+                var result;
+
+                if(length <= 0 || width <=0){
+                    alert("Please enter the correct value...");
+                    return 0;
+                }
+
+                result = (length + width) * 2;
+                document.getElementById("result").value = result.toFixed(2);
+                alert(result.toFixed(2)+"cm");
+            }
+        </script>
+    </body>
+</html>

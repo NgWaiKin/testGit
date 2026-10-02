@@ -1,0 +1,51 @@
+<html>
+    <body>
+    <script>
+        var age = 20;
+
+        if(age>17 && age<=70){
+            status="driving test";
+        }
+        else{
+            status="No Test!!";
+        }
+
+        document.writeln(status);
+        </script>
+
+        <br>
+
+        <script>
+            var age = 20;
+            var score = 74;
+
+            if(age > 17 || score > 75){
+                status = "Car Test";
+            }
+            else if(age > 16){
+                status = "Motorbike Test";
+            }
+            else{
+                status = "No Test !!";
+            }
+            document.writeln(status);
+
+        </script>
+
+        <p>Click the button to loop through a block of code five times.</p>
+        <button onclick="myFunction()">Try it</button>
+        <p id="demo"></p>
+        <script>
+            function myFunction(){
+                var text = "";
+                var i ;
+
+                for(i=0;i<5;i++){
+                    text += "The number is " + i + "<br>";
+                }
+                document.getElementById("demo").innerHTML = text;
+            }
+        </script>
+
+    </body>
+</html>
